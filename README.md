@@ -1,44 +1,53 @@
-# Alfred-Virtual-Assistant
+# Ask Alfred
+
 Virtual Assistant Named Alfred created with python
+![alt text](alfred.png)
 
 ## Setup
-Install Pip if not already installed
-
-Download:
-```bash
-curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-```
-Install:
-```bash
-python get-pip.py
-```
 
 Install Poetry
+
 ```bash
-pip install poetry
+pipx install poetry
+```
+
+On Linux, install system libraries required by `pyaudio` before running Poetry:
+
+```bash
+sudo apt-get update && sudo apt-get install -y portaudio19-dev
+```
+
+For voice output with `pyttsx3` on Linux, also install `espeak`:
+
+```bash
+sudo apt-get install -y espeak-ng libespeak1
 ```
 
 ## Installation
 
 After cloning the repo, run the following command to install dependencies
+
 ```bash
 poetry install
 ```
-And to activate the environment 
+
+And to activate the environment
+
 ```bash
-poetry shell
+poetry env activate
 ```
 
 ## Run Code
+
 ```bash
-py app.py
+poetry run python app.py
 ```
 
 ## Commands:
-* "Tell me your name"
-* "Alfred, I have a question" (Alfred will ask what your question is) -> Ask question -> answer displayed on screen
-* "Alfred, Play Pandora" - (if signed into pandora, will open pandora on screen and start music)
-* "Alfred, What Time is it?"
-* "Alfred, What's today?"
-* "Alfred, Shutdown" (Ends program)
 
+- "Tell me your name"
+- "Alfred, I have a question" (Alfred will ask what your question is) -> Ask question -> answer displayed on screen
+- "Alfred, Play Pandora" - (if signed into pandora, will open pandora on screen and start music)
+- "Alfred, What Time is it?"
+- "Alfred, What's today?"
+- "Alfred Shutdown" (Ends program)
