@@ -1,7 +1,7 @@
 # Ask Alfred (Batman Fan Project)
 
 Virtual Assistant Named Alfred created with python
-![alt text](alfred.png)
+![alt text](./images/ask_alfred.png)
 
 ## Setup
 
