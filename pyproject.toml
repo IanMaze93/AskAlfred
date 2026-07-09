@@ -9,8 +9,8 @@ package-mode = false
 [tool.poetry.dependencies]
 python = "^3.11"
 speechrecognition = "^3.10.0"
-pyttsx3 = "^2.90"
 pyaudio = "^0.2.14"
+piper-tts = "^1.4.2"
 
 
 [build-system]
