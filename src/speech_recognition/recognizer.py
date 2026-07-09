@@ -1,5 +1,6 @@
 import contextlib
 import os
+
 import speech_recognition
 
 recognizer = speech_recognition.Recognizer()
@@ -16,6 +17,7 @@ def suppress_stderr():
             os.dup2(original_stderr, 2)
             os.close(original_stderr)
 
+
 def find_microphone():
     names = speech_recognition.Microphone.list_microphone_names()
 
@@ -24,6 +26,7 @@ def find_microphone():
             return index
 
     return None
+
 
 def recognize_speech() -> str:
     try:

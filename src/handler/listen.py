@@ -1,21 +1,18 @@
-
-
-from src.speech_recognition.recognizer import recognize_speech
-from src.types.commands import Commands
+from src.commands.date_time import tellDay, tellTime
+from src.commands.goodby import say_goodbye
+from src.commands.greeting import greeting
 from src.commands.look_up import look_up
 from src.commands.music import play_pandora, play_spotify
-from src.commands.goodby import say_goodbye
-from src.commands.date_time import tellDay, tellTime
 from src.commands.self import self
-from src.commands.greeting import greeting
-from src.tts.tts_engine import speak
+from src.speech_recognition.recognizer import recognize_speech
+from src.types.commands import Commands
 
 
 def listen():
     greeting()
 
     # Continue to loop until command to shutdown
-    while(True):
+    while True:
         try:
             query = recognize_speech()
             print(f"Recognized Query: {query}")
@@ -25,7 +22,7 @@ def listen():
 
         if not query or query == "None":
             continue
-        
+
         # Lower Case Queries work the best
         query = query.lower()
         print(f"Lower Case Query: {query}")
@@ -51,5 +48,3 @@ def listen():
         elif Commands.SHUTDOWN.value in query:
             say_goodbye()
             exit()
-
-		
