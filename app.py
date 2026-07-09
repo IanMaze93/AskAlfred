@@ -25,7 +25,7 @@ def _suppress_stderr():
 
 
 # this method is for taking the commands and recognizing the command from the
-# speech_Recognition module we will use the recongizer method for recognizing
+# speech_Recognition module we will use the recognize method for recognizing
 def takeCommand():
 	global _mic_error_logged
 
