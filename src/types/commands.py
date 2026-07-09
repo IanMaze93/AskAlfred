@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class Commands(Enum):
     NAME = "tell me your name"
     QUESTION = "alfred i have a question"
