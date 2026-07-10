@@ -35,3 +35,6 @@ jobs:
 
       - name: Format Check
         run: poetry run ruff format --check .
+
+      - name: Run Tests
+        run: poetry run pytest
