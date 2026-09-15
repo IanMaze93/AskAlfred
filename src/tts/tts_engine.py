@@ -1,7 +1,7 @@
 import subprocess
 from pathlib import Path
 
-VOICE_MODEL = Path("src/voices/en_US-lessac-medium.onnx")
+VOICE_MODEL = Path("src/voices/en_GB-alan-medium.onnx")
 AUDIO_OUTPUT = Path("src/audio/alfred_response.wav")
 
 
